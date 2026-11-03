@@ -1,1 +1,23 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>المكتبة القانونية الشاملة</title>
+    <script type="text/javascript">
+      // إعادة توجيه المسارات لمتصفح جيت هاب صفحات تفاعلية
+      var segment = 1;
+      var l = window.location;
+      var pathSegments = l.pathname.split('/').slice(1);
+      if (pathSegments.length > 0 && pathSegments[0] !== '') {
+        l.replace(
+          l.protocol + '//' + l.host + '/' + pathSegments[0] + '/?p=/' +
+          pathSegments.slice(segment).join('/') +
+          (l.search ? '&' + l.search.slice(1) : '') +
+          l.hash
+        );
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
